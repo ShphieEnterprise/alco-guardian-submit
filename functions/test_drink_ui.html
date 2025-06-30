@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飲酒記録エンドポイントテスト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: none;
+        }
+        .result.show {
+            display: block;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+        .audio-player {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .guardian-status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .guardian-green {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .guardian-yellow {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .guardian-red {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍺 飲酒記録エンドポイントテスト</h1>
+        
+        <div class="form-group">
+            <label for="endpoint">エンドポイントURL:</label>
+            <input type="text" id="endpoint" value="https://asia-northeast1-alco-guardian.cloudfunctions.net/drink">
+        </div>
+        
+        <div class="form-group">
+            <label for="drinkType">お酒の種類:</label>
+            <select id="drinkType">
+                <option value="ビール">ビール</option>
+                <option value="ハイボール">ハイボール</option>
+                <option value="その他">その他</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="alcoholPercentage">アルコール度数 (%):</label>
+            <input type="number" id="alcoholPercentage" value="5" step="0.1" min="0" max="100">
+        </div>
+        
+        <div class="form-group">
+            <label for="volume">飲酒量 (ml):</label>
+            <input type="number" id="volume" value="350" step="10" min="1">
+        </div>
+        
+        <button id="submitBtn" onclick="submitDrink()">飲酒記録を送信</button>
+        
+        <div id="result" class="result">
+            <h3>結果:</h3>
+            <div id="status"></div>
+            <div id="message"></div>
+            <div id="guardian" class="guardian-status"></div>
+            <div id="audioContainer"></div>
+            <div id="rawResponse"></div>
+        </div>
+    </div>
+
+    <script>
+        async function submitDrink() {
+            const endpoint = document.getElementById('endpoint').value;
+            const drinkType = document.getElementById('drinkType').value;
+            const alcoholPercentage = parseFloat(document.getElementById('alcoholPercentage').value);
+            const volume = parseFloat(document.getElementById('volume').value);
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const resultDiv = document.getElementById('result');
+            const statusDiv = document.getElementById('status');
+            const messageDiv = document.getElementById('message');
+            const guardianDiv = document.getElementById('guardian');
+            const audioContainer = document.getElementById('audioContainer');
+            const rawResponseDiv = document.getElementById('rawResponse');
+            
+            // UIをリセット
+            submitBtn.disabled = true;
+            submitBtn.textContent = '送信中...';
+            resultDiv.classList.remove('show');
+            
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        drinkType,
+                        alcoholPercentage,
+                        volume
+                    })
+                });
+                
+                const data = await response.json();
+                
+                // 結果を表示
+                resultDiv.classList.add('show');
+                
+                if (response.ok && data.success) {
+                    statusDiv.innerHTML = '<span class="success">✅ 成功</span>';
+                    messageDiv.innerHTML = `<strong>メッセージ:</strong> ${data.message}`;
+                    
+                    // Guardian状態を表示
+                    if (data.guardian && data.guardian.level) {
+                        const color = data.guardian.level.color;
+                        guardianDiv.className = `guardian-status guardian-${color}`;
+                        guardianDiv.innerHTML = `
+                            <strong>Guardian状態:</strong> ${data.guardian.level.message}<br>
+                            ${data.guardian.analysis || ''}
+                        `;
+                    }
+                    
+                    // 音声プレイヤーを表示
+                    if (data.audioUrl) {
+                        audioContainer.innerHTML = `
+                            <strong>音声レスポンス:</strong><br>
+                            <audio controls class="audio-player">
+                                <source src="${data.audioUrl}" type="audio/mpeg">
+                                お使いのブラウザは音声再生に対応していません。
+                            </audio>
+                        `;
+                    }
+                    
+                    // 純アルコール量を表示
+                    if (data.data && data.data.alcoholG) {
+                        messageDiv.innerHTML += `<br><strong>純アルコール量:</strong> ${data.data.alcoholG.toFixed(1)}g`;
+                    }
+                } else {
+                    statusDiv.innerHTML = '<span class="error">❌ エラー</span>';
+                    messageDiv.innerHTML = `<strong>エラー:</strong> ${data.message || 'Unknown error'}`;
+                }
+                
+                // 生のレスポンスを表示
+                rawResponseDiv.innerHTML = `
+                    <details>
+                        <summary>レスポンス詳細 (JSON)</summary>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </details>
+                `;
+                
+            } catch (error) {
+                resultDiv.classList.add('show');
+                statusDiv.innerHTML = '<span class="error">❌ ネットワークエラー</span>';
+                messageDiv.innerHTML = `<strong>エラー:</strong> ${error.message}`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '飲酒記録を送信';
+            }
+        }
+    </script>
+</body>
+</html>

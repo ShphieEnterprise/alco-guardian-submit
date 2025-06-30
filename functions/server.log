@@ -1,0 +1,234 @@
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Serving Flask app 'simple_local_server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.3.64:8080
+[33mPress CTRL+C to quit[0m
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 265-527-025
+127.0.0.1 - - [30/Jun/2025 00:14:59] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:15:09] "GET /get_drinks_master HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:15:26] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:16:39] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:17:01] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:17:01] "POST /start_session HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:17:11] "[33mOPTIONS /transcribe HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jun/2025 00:17:15] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:17:15] "[31m[1mPOST /start_session HTTP/1.1[0m" 400 -
+127.0.0.1 - - [30/Jun/2025 00:17:16] "[35m[1mOPTIONS /get_drinks_master HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:17:16] "GET /get_drinks_master HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:17:17] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:17:17] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:17:20] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:17:20] "[31m[1mPOST /start_session HTTP/1.1[0m" 400 -
+127.0.0.1 - - [30/Jun/2025 00:17:30] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:17:30] "[31m[1mPOST /start_session HTTP/1.1[0m" 400 -
+127.0.0.1 - - [30/Jun/2025 00:17:57] "GET /health HTTP/1.1" 200 -
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 643-454-500
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 929-882-131
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 327-181-061
+127.0.0.1 - - [30/Jun/2025 00:19:06] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:19:06] "POST /start_session HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:19:12] "[33mOPTIONS /transcribe HTTP/1.1[0m" 404 -
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 894-876-471
+127.0.0.1 - - [30/Jun/2025 00:19:50] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:19:50] "POST /start_session HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:19:55] "[35m[1mOPTIONS /transcribe HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:19:55] "POST /transcribe HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:20:52] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:20:52] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:20:56] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:20:56] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:20:57] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:20:57] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:20:58] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:20:58] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:20:59] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:20:59] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:20:59] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:20:59] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:21:02] "[35m[1mOPTIONS /drink HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:21:02] "[35m[1mPOST /drink HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/.venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py", line 164, in drink
+    "timestamp": datetime.now().isoformat()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'datetime' where it is not associated with a value
+127.0.0.1 - - [30/Jun/2025 00:21:10] "[35m[1mOPTIONS /get_current_session?userId=demo_user_001 HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:21:10] "GET /get_current_session?userId=demo_user_001 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:21:12] "[35m[1mOPTIONS /guardian_check HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:21:12] "POST /guardian_check HTTP/1.1" 200 -
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 259-772-843
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 828-612-710
+ * Detected change in '/Users/satory074/Basecamp/src/alco-guardian/functions/simple_local_server.py', reloading
+🚀 AlcoGuardian Simple Local Server
+📍 Running on http://localhost:8080
+
+Available endpoints:
+  GET  /health
+  GET  /get_drinks_master
+  POST /chat
+  POST /start_session
+  POST /add_drink
+  GET  /get_current_session
+
+Press Ctrl+C to stop
+
+ * Restarting with watchdog (fsevents)
+ * Debugger is active!
+ * Debugger PIN: 182-285-773
+127.0.0.1 - - [30/Jun/2025 00:45:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:21] "GET /get_drinks_master HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:24] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:24] "POST /start_session HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:26] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:26] "GET /get_drinks_master HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:26] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:26] "GET /get_drinks_master HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:27] "[35m[1mOPTIONS /start_session HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:27] "POST /start_session HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:28] "[35m[1mOPTIONS /get_drinks_master HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:28] "GET /get_drinks_master HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:28] "[35m[1mOPTIONS /chat HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:28] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:30] "[35m[1mOPTIONS /drink HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:30] "POST /drink HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:32] "[35m[1mOPTIONS /guardian_check HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:32] "POST /guardian_check HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jun/2025 00:45:33] "[35m[1mOPTIONS /drink HTTP/1.1[0m" 204 -
+127.0.0.1 - - [30/Jun/2025 00:45:33] "POST /drink HTTP/1.1" 200 -

@@ -1,0 +1,43 @@
+# Ignore git metadata and temporary files
+.git
+.gitignore
+
+# Build artifacts
+build/
+**/build/
+
+# IDE and tool files
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Flutter & Dart caches
+.dart_tool/
+.packages
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Unnecessary platform directories when building for web
+android/
+ios/
+macos/
+linux/
+windows/
+
+# Documentation and test files
+docs/
+test/
+**/*.md
+
+# Log files
+*.log
+**/*.log
+
+# IMPORTANT: Ensure firebase_options.dart is included in Docker build
+# This file is gitignored but required for the build
+!lib/firebase_options.dart 
